@@ -1,13 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pompeii-carlisle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Pompeii | Italian Restaurant & Wood-Fired Kitchen</title>
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container nav">
+        <a href="#" class="logo">Pompeii</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li>
+            <a href="#location">
+              <span class="mobile-hide">Hours & Location</span>
+              <span class="desktop-hide">Hours</span>
+            </a>
+          </li>
+        </ul>
+        <a href="tel:+17170000000" class="btn-cta">
+          <span class="mobile-hide">Call to Order</span>
+          <span class="desktop-hide">Call Us</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero-tag">Carlisle, Pennsylvania</p>
+        <h1 class="hero-title">Wood-Fired Pizza &amp; Italian Classics</h1>
+        <p class="hero-subtitle">
+          Handcrafted pasta, authentic brick-oven pizza, and fresh antipasti served in a warm, welcoming setting.
+        </p>
+        <a href="#menu" class="btn-cta">View Full Menu</a>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="section">
+      <div class="container">
+        <h2 class="section-title">The Menu</h2>
+
+        <div class="menu-category">
+          <h3 class="category-title">Antipasti</h3>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="item-header">
+                <span class="item-name">Melone e Prosciutto</span>
+                <span class="item-price">$14.00</span>
+              </div>
+              <p class="item-desc">Aged prosciutto di Parma, ripe seasonal cantaloupe, balsamic glaze reduction.</p>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <span class="item-name">Bruschetta Rustica</span>
+                <span class="item-price">$10.50</span>
+              </div>
+              <p class="item-desc">Toasted garlic bread, vine tomatoes, sweet basil, extra virgin olive oil.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category">
+          <h3 class="category-title">Wood-Fired Pizza</h3>
+          <div class="menu-grid">
+            <div class="menu-item">
+              <div class="item-header">
+                <span class="item-name">Margherita D.O.P.</span>
+                <span class="item-price">$18.00</span>
+              </div>
+              <p class="item-desc">San Marzano tomatoes, fresh mozzarella, fresh sweet basil, olive oil.</p>
+            </div>
+            <div class="menu-item">
+              <div class="item-header">
+                <span class="item-name">Diavola</span>
+                <span class="item-price">$20.50</span>
+              </div>
+              <p class="item-desc">Spicy soppressata, crushed red chili, house tomato sauce, fresh mozzarella.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hours & Location -->
+    <section id="location" class="info-section">
+      <div class="container info-grid">
+        <div class="info-card">
+          <h3>Location</h3>
+          <p>Carlisle, PA</p>
+          <p><a href="tel:+17170000000">(717) 000-0000</a></p>
+        </div>
+        <div class="info-card">
+          <h3>Kitchen Hours</h3>
+          <p>Tue – Thu: 4:00 PM – 9:00 PM</p>
+          <p>Fri – Sat: 4:00 PM – 10:00 PM</p>
+          <p>Sun: 12:00 PM – 8:00 PM</p>
+          <p>Monday: Closed</p>
+        </div>
+        <div class="info-card">
+          <h3>Reservations</h3>
+          <p>Walk-ins welcome.</p>
+          <p>For parties of 6 or more, please call ahead.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Pompeii Italian Restaurant. All rights reserved.</p>
+      </div>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

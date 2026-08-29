@@ -24,10 +24,7 @@ git-token.txt
 *.sln
 *.sw?
 
-# Ignore video folder contents but keep the folder
-src/assets/video/*
-!src/assets/video/.gitkeep
+# Ignore assets folder contents but keep the folder
+src/assets/*
+!src/assets/.gitkeep
 
-# Ignore image folder contents but keep the folder
-src/assets/images/*
-!src/assets/images/.gitkeep

@@ -23,3 +23,11 @@ git-token.txt
 *.njsproj
 *.sln
 *.sw?
+
+# Ignore video folder contents but keep the folder
+src/assets/video/*
+!src/assets/video/.gitkeep
+
+# Ignore image folder contents but keep the folder
+src/assets/images/*
+!src/assets/images/.gitkeep

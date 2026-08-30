@@ -12,6 +12,7 @@
 
   /* Brand Color */
   --old-gold: #BD8420;
+   --old-gold-dark: #b37a18;
  
   /* Neutrals */
   --canvas: #efe9e4;
@@ -77,7 +78,6 @@ a {
   text-decoration: none;
 }
 
-.nav,
 .hero,
 .info-section,
 .footer {
@@ -127,26 +127,53 @@ img {
   box-shadow: 0 0 15px 10px rgba(var(--olive-sage-rgb), .45);
 }
 
-/* --- SVG Styles --- */
-
-.hero-overlay-svg {
-  position: absolute;
-  width: clamp(100px, 14vw, 160px);
-  height: clamp(100px, 14vw, 160px);
-  pointer-events: none;
-  z-index: 1;
-  
-  /* Global SVG Controls */
-  opacity: 0.18; 
-  background-color: var(--espresso); /* Change this to instantly alter SVG color */
-  
-  /* Mask Boilerplate */
+.mask {
+  display: block;
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
+}
+
+.watermark {
+  position: absolute;
+  width: clamp(100px, 14vw, 160px);
+  height: clamp(100px, 14vw, 160px);
+  color: var(--espresso);
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: clamp(100px, 14vw, 160px);
+  height: clamp(100px, 14vw, 160px);
+  pointer-events: none;
+  z-index: 1;
+  background-color: var(--espresso); /* Change this to instantly alter SVG color */
+}
+
+.hero-overlay-left {
+  top: 50%;
+  left: -80px;
+  transform: translateY(-50%) rotate(0deg);
+  
+  /* Absolute path mapping for Vite */
+  -webkit-mask-image: url('/src/assets/images/svg/olive-sprig.svg');
+  mask-image: url('/src/assets/images/svg/olive-sprig.svg');
+}
+
+.hero-overlay-right {
+  top: 50%;
+  right: -80px;
+  transform: translateY(-50%) rotate(0deg);
+  
+  /* Absolute path mapping for Vite */
+  -webkit-mask-image: url('/src/assets/images/svg/dop-seal.svg');
+  mask-image: url('/src/assets/images/svg/dop-seal.svg');
 }
 
 /* ------------ */
@@ -166,20 +193,41 @@ img {
   height: 5rem;
   background: rgba(var(--canvas-rgb), 0.65);
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 3.25rem;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .logo {
-  font-size: 1.75rem;
-  text-decoration: none;
+  width: clamp(120px, 12vw, 180px);
+  /* An empty div needs explicit dimensions to hold a mask */
+  aspect-ratio: 3 / 1;
+  
+  background-color: var(--old-gold);
+  opacity: 1;
+  
+  /* Ensure both paths point to the exact same file */
+  -webkit-mask-image: url('/src/assets/images/svg/logo-white.svg');
+  mask-image: url('/src/assets/images/svg/logo-white.svg');
+}
+
+.logo-tagline {
+  display: none;
+  font-family: var(--font-sans);
+  font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+  font-weight: 400;
   color: var(--old-gold);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 }
 
 .nav-links {
   font-weight: 400;
   font-size: 0.95rem;
+  font-size: clamp(0.9rem, 1.3vw, 10rem);
   display: flex;
   gap: 2rem;
   list-style: none;
@@ -208,7 +256,7 @@ img {
   padding: 0.75rem 1.4rem;
   border-radius: 4px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: clamp(0.6rem, 3.25vw, 1.4rem);
   font-weight: 500;
   letter-spacing: 0.04em;
   transition: background 0.2s;
@@ -219,7 +267,27 @@ img {
   transform: scale(0.95)
 }
 
-@media (hover: hover) {
+.btn-lite {
+  background-color: none;
+  color: var(--espresso);
+  padding: 0.75rem 1.4rem;
+  border-radius: 4px;
+  border: 1px solid var(--espresso);
+  outline: 1.5px solid var(--old-gold);
+  outline-offset: -4.5px;
+  text-decoration: none;
+  font-size: clamp(0.6rem, 3.25vw, 1.4rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: background 0.2s;
+}
+
+.btn-cta:active {
+  background-color: var(--old-gold-dark);
+  transform: scale(0.95)
+}
+
+@media (any-hover: hover) {
 
 .nav-links a:hover, .link a:hover {
   color: var(--old-gold);
@@ -291,6 +359,7 @@ img {
   border: 1px solid var(--old-gold);
 
   display: block;
+}
 
 /* -- Overlay Styles -- */
 
@@ -312,7 +381,6 @@ img {
   /* Absolute path mapping for Vite */
   -webkit-mask-image: url('/src/assets/images/svg/dop-seal.svg');
   mask-image: url('/src/assets/images/svg/dop-seal.svg');
-}
 }
 
 /* Overlapping Text Styles (Base / Desktop) */
@@ -545,7 +613,46 @@ img {
     letter-spacing: clamp(0.05em, 0.8vw, 0.3em);
     word-spacing: clamp(0.9rem, 3.2vw, 3rem);
   }
+
+  /* --- Desktop & Tablet Landscape Only --- */
+@media (min-width: 900px) {
+  
+  .logo-tagline {
+    display: inline-block;
+  }
+
+  .nav-links {
+    /* Pushes the navigation group against the right side */
+    margin-left: auto; 
+    margin-right: 3rem;
+    /* Increases the breathing room between navigation words */
+    gap: 3.5rem; 
+  }
+  
+  .btn-cta {
+    /* Ensures the CTA button doesn't crowd the last menu link */
+    margin-left: 3rem; 
+  }
 }
+}
+
+/* --- Mobile Universal --- */
+@media (max-width: 600px),
+(max-width: 960px) and (orientation: landscape) {
+  .hero-text {
+    padding: 0rem 0.75rem;
+    
+    /* Negative Y pulls it up over the top edge / down over the bottom edge */
+    --offset-y: -0.75rem; 
+    
+    /* Negative X reverses your calc() to push it INWARD from the left/right edges */
+    --offset-x: -1.5rem; 
+  }
+
+  .hero-tag {
+    margin-bottom: 2rem;
+  }
+  }
 
 /* --- Mobile Portrait --- */
 @media (max-width: 600px) and (orientation: portrait) {
@@ -564,41 +671,9 @@ img {
     grid-template-columns: 1fr;
     gap: 0rem;
   }
-
-  .hero-text {
-    padding: 0.2rem 0.75rem;
-    
-    /* Negative Y pulls it up over the top edge / down over the bottom edge */
-    --offset-y: -0.75rem; 
-    
-    /* Negative X reverses your calc() to push it INWARD from the left/right edges */
-    --offset-x: -0.75rem; 
-  }
-
-  .hero-tag {
-    margin-bottom: 2rem;
-  }
-
-  .nav {
-    height: 5rem;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .logo {
-    width: auto;
-    margin-bottom: 0;
-    text-align: left;
-  }
   
   .nav-links {
     gap: 0.75rem;
-  }
-  
-  .btn-cta {
-    padding: 0.5rem 0.75rem;
   }
 
   .info-grid {
@@ -626,8 +701,12 @@ img {
     padding-right: calc(1rem + env(safe-area-inset-right));
   }
   
-  .nav {
-    height: 70px;
-    align-items: center;
+
+    .hero-nav-strip {
+    width: clamp(60%, 85vw, 900px);
+    margin-top: 1rem;
+    font-size: clamp(0.8rem, 1.4vw, 1rem);
+    letter-spacing: clamp(0.05em, 0.8vw, 0.3em);
+    word-spacing: clamp(0.9rem, 3.2vw, 3rem);
   }
 }

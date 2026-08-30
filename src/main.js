@@ -23,3 +23,4 @@ document.addEventListener('DOMContentLoaded', () => {
     text.textContent = contactInfo.phoneDisplay;
   });
 });
+

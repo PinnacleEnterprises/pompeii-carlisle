@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oooh+Baby:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Birthstone:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
 
 :root {
   /* unused */
@@ -51,6 +53,9 @@
   --font-serif: 'Cormorant Garamond', Georgia, serif,'Noto Sans Symbols 2';
   --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-script: 'Birthstone', 'Birthstone Bounce', cursive;
+  --font-sans-script: 'Bad Script';
+
+  background-color: var(--sand);
 
 }
 
@@ -64,8 +69,25 @@
   padding: 0;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: clip; /* Or hidden for older fallback */
+}
+
 body {
   background-color: var(--canvas);
+  color: var(--espresso);
+  font-family: var(--font-sans), 'Noto Sans Symbols 2';
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--canvas);
+  background-image: filter(url('/src/assets/images/backdrop/pink-marble.png'), opacity(0.35));
+  background-repeat: repeat;
+  background-blend-mode: multiply;
   color: var(--espresso);
   font-family: var(--font-sans), 'Noto Sans Symbols 2';
   font-weight: 300;
@@ -157,11 +179,11 @@ img {
   z-index: 100;
   justify-content: space-between;
   align-items: center;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  border-bottom: 1px solid var(--sand);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border-bottom: 1px solid var(--stone);
   height: 5rem;
-  background: rgba(var(--canvas-rgb), 0.65);
+  background: rgba(var(--olive-sage-rgb), 0.28);
   margin: 0 auto;
   padding: 0 3.25rem;
 }
@@ -172,7 +194,9 @@ img {
   gap: 1.25rem;
 }
 
+
 .logo {
+  position: relative;
   width: clamp(120px, 12vw, 180px);
   /* An empty div needs explicit dimensions to hold a mask */
   aspect-ratio: 3 / 1;
@@ -192,6 +216,10 @@ img {
   font-weight: 400;
   color: var(--old-gold);
   letter-spacing: 0.05em;
+}
+
+.logo-tagline, .nav-links {
+  text-shadow: 0 0 1px var(--sand);
 }
 
 .nav-links, .btn-nav {
@@ -222,28 +250,45 @@ font-size: clamp(0.9rem, 1.3vw, 10rem);
   transition: color 0.2s;
 }
 
-.btn-cta , .btn-nav {
+.btn-cta, .btn-nav {
   background-color: var(--old-gold);
-  color: #fff;
+  color: var(--canvas);
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.04em;
+}
+
+.btn-cta, .btn-nav, .btn-lite {
   transition: background 0.2s;
 }
 
 .btn-cta {
   font-size: clamp(0.6rem, 3.25vw, 1.4rem);
   padding: 0.75rem 1.4rem;
+  outline-color: var(--sand);
+}
+
+.btn-cta:active , .btn-nav:active{
+  background-color: var(--old-gold-dark);
+}
+
+.btn-cta:active , .btn-nav:active, .btn-lite:active {
+  transform: scale(0.95)
 }
 
 .btn-nav {
   padding: 0.4rem 1rem;
 }
 
-.btn-cta:active {
-  background-color: var(--old-gold-dark);
-  transform: scale(0.95)
+.btn-stroke {
+  outline: 1.5px solid;
+  outline-offset: -4.5px;
+  border-color: var(-old-gold);
+}
+
+.btn-stroke:active {
+  border: 1.5px inset var(--old-gold);
 }
 
 .btn-lite {
@@ -252,8 +297,7 @@ font-size: clamp(0.9rem, 1.3vw, 10rem);
   padding: 0.75rem 1.4rem;
   border-radius: 4px;
   border: 1.5px solid var(--old-gold);
-  outline: 1.5px solid var(--old-gold);
-  outline-offset: -4.5px;
+  outline-color: var(--old-gold);
   text-decoration: none;
   font-size: clamp(0.6rem, 3.25vw, 1.4rem);
   font-weight: 500;
@@ -261,9 +305,8 @@ font-size: clamp(0.9rem, 1.3vw, 10rem);
   transition: background 0.2s;
 }
 
-.btn-cta:active {
-  background-color: var(--old-gold-dark);
-  transform: scale(0.95)
+.btn-lite:active {
+background-color: var(--stone);
 }
 
 @media (any-hover: hover) {
@@ -273,7 +316,7 @@ font-size: clamp(0.9rem, 1.3vw, 10rem);
   transition: color 0.2s;
 }
 
-.btn-cta:hover {
+.btn-cta:hover, .btn-nav: hover {
   background-color: var(--old-gold-dark);
   transition: color 0.2s
 }
@@ -289,7 +332,15 @@ font-size: clamp(0.9rem, 1.3vw, 10rem);
   padding: 2rem 0 3rem;
   text-align: center;
   border-bottom: 1px solid var(--sand);
+  overflow-x: clip;
 }
+
+/* .hero {
+  background-image: filter(url('/src/assets/images/backdrop/pink-marble.png'), opacity(0.35));
+  background-color: var(--canvas);
+  background-repeat: repeat;
+  background-blend-mode: multiply; 
+} */
 
 .hero-tag {
   font-size: 0.85rem;
@@ -306,8 +357,9 @@ font-size: clamp(0.9rem, 1.3vw, 10rem);
   margin-bottom: 1.5rem;
 }
 
-.hero-subtitle {
+.hero-desc {
   font-size: 1.15rem;
+  font-family: var(--font-sans);
   color: var(--cafe-au-lait);
   text-align: center;
   max-width: 600px;
@@ -327,7 +379,6 @@ font-size: clamp(0.9rem, 1.3vw, 10rem);
   max-width: 750px;
   margin: 0.5rem auto 2rem;
 }
-
 
 .img-hero {
   width: 100%;

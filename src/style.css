@@ -141,39 +141,10 @@ img {
   position: absolute;
   width: clamp(100px, 14vw, 160px);
   height: clamp(100px, 14vw, 160px);
-  color: var(--espresso);
-  opacity: 0.1;
+  background-color: var(--espresso);
+  opacity: 0.08;
   pointer-events: none;
   z-index: 0;
-}
-
-.hero-overlay {
-  position: absolute;
-  width: clamp(100px, 14vw, 160px);
-  height: clamp(100px, 14vw, 160px);
-  pointer-events: none;
-  z-index: 1;
-  background-color: var(--espresso); /* Change this to instantly alter SVG color */
-}
-
-.hero-overlay-left {
-  top: 50%;
-  left: -80px;
-  transform: translateY(-50%) rotate(0deg);
-  
-  /* Absolute path mapping for Vite */
-  -webkit-mask-image: url('/src/assets/images/svg/olive-sprig.svg');
-  mask-image: url('/src/assets/images/svg/olive-sprig.svg');
-}
-
-.hero-overlay-right {
-  top: 50%;
-  right: -80px;
-  transform: translateY(-50%) rotate(0deg);
-  
-  /* Absolute path mapping for Vite */
-  -webkit-mask-image: url('/src/assets/images/svg/dop-seal.svg');
-  mask-image: url('/src/assets/images/svg/dop-seal.svg');
 }
 
 /* ------------ */
@@ -359,28 +330,31 @@ img {
   border: 1px solid var(--old-gold);
 
   display: block;
+
+  position: relative;
+  z-index: 1;
 }
 
 /* -- Overlay Styles -- */
 
-  .hero-overlay-left {
-  top: 50%;
-  left: -80px;
-  transform: translateY(-50%) rotate(-15deg);
+.hero-overlay-left {
+  top: 55%;
+  left: -215px;
+  transform: scale(1.3);
   
   /* Absolute path mapping for Vite */
-  -webkit-mask-image: url('/src/assets/images/svg/olive-sprig.svg');
-  mask-image: url('/src/assets/images/svg/olive-sprig.svg');
+  -webkit-mask-image: url('/src/assets/images/svg/DOP.svg');
+  mask-image: url('/src/assets/images/svg/DOP.svg');
 }
 
 .hero-overlay-right {
-  top: 50%;
-  right: -80px;
-  transform: translateY(-50%) rotate(12deg);
-  
+  top: 35%; 
+  right: -200px; 
+  transform: scaleX(-2.4) scaleY(3) rotate(-20deg);
+
   /* Absolute path mapping for Vite */
-  -webkit-mask-image: url('/src/assets/images/svg/dop-seal.svg');
-  mask-image: url('/src/assets/images/svg/dop-seal.svg');
+  -webkit-mask-image: url('/src/assets/images/svg/rosemary.svg');
+  mask-image: url('/src/assets/images/svg/rosemary.svg');
 }
 
 /* Overlapping Text Styles (Base / Desktop) */

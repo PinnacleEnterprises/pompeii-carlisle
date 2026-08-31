@@ -112,6 +112,13 @@ a {
   padding: 0 1.5rem;
 }
 
+@media (max-height: 600px) and (orientation: landscape) {
+  .container {
+    padding-left: calc(1rem + env(safe-area-inset-left));
+    padding-right: calc(1rem + env(safe-area-inset-right));
+  }
+}
+
 /* Typography Helpers */
 h1, h2, h3, .brand-font {
   font-family: var(--font-serif);
@@ -183,9 +190,21 @@ img {
   backdrop-filter: blur(3px);
   border-bottom: 1px solid var(--stone);
   height: 5rem;
-  background: rgba(var(--olive-sage-rgb), 0.28);
+  background: rgba(var(--stone-rgb), 0.28);
   margin: 0 auto;
   padding: 0 3.25rem;
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .header {  
+    padding: 0 1rem;
+  }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .header {  
+    padding: 0 4.5rem;
+  }
 }
 
 .brand-lockup {
@@ -242,12 +261,63 @@ font-size: clamp(0.9rem, 1.3vw, 10rem);
   color: var(--old-gold);
 }
 
+@media (min-width: 601px) {
+  .mobile-hide {
+    display: inline;
+  }
+  .desktop-hide {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .logo-tagline {
+    display: inline-block;
+  }
+
+  .nav-links {
+    /* Pushes the navigation group against the right side */
+    margin-left: auto; 
+    margin-right: 3rem;
+    /* Increases the breathing room between navigation words */
+    gap: 3.5rem; 
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .mobile-hide {
+    display: none;
+  }
+  .desktop-hide {
+    display: inline;
+  }
+  
+  .nav-links {
+    gap: 0.75rem;
+  }
+}
+
 .link a {
   text-decoration: none;
   color: var(--slate-blue);
   font-weight: 400;
   font-size: 0.95rem;
   transition: color 0.2s;
+}
+
+.btn-cta,
+.btn-nav,
+.btn-lite {
+  position: relative;
+  white-space: nowrap; /* Prevents text from breaking into two stacked lines */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: fit-content;
+
+  transition: background 0.2s;
+  z-index: 10;
 }
 
 .btn-cta, .btn-nav {
@@ -259,14 +329,16 @@ font-size: clamp(0.9rem, 1.3vw, 10rem);
   letter-spacing: 0.04em;
 }
 
-.btn-cta, .btn-nav, .btn-lite {
-  transition: background 0.2s;
+.btn-cta {
+  outline-color: var(--sand);
 }
 
-.btn-cta {
-  font-size: clamp(0.6rem, 3.25vw, 1.4rem);
-  padding: 0.75rem 1.4rem;
-  outline-color: var(--sand);
+.btn-cta,
+.btn-lite {
+  /*   font-size: clamp(0.6rem, 3.25vw, 1.4rem); */
+  font-size: clamp(1rem, 3vh, 1.6rem); /* Replaces 3.25vw */
+  padding: 0.5rem 1.2rem;
+  margin-top: 1rem;
 }
 
 .btn-cta:active , .btn-nav:active{
@@ -281,6 +353,13 @@ font-size: clamp(0.9rem, 1.3vw, 10rem);
   padding: 0.4rem 1rem;
 }
 
+@media (max-width: 600px) and (orientation: portrait) {
+  .btn-cta,
+  .btn-lite {
+    font-size: clamp(1rem, 3vw, 1.6rem);
+  }
+}
+
 .btn-stroke {
   outline: 1.5px solid;
   outline-offset: -4.5px;
@@ -292,14 +371,12 @@ font-size: clamp(0.9rem, 1.3vw, 10rem);
 }
 
 .btn-lite {
-  background-color: none;
+  background-color: rgba(var(--canvas-rgb), 0.45);
   color: var(--espresso);
-  padding: 0.75rem 1.4rem;
   border-radius: 4px;
   border: 1.5px solid var(--old-gold);
   outline-color: var(--old-gold);
   text-decoration: none;
-  font-size: clamp(0.6rem, 3.25vw, 1.4rem);
   font-weight: 500;
   letter-spacing: 0.04em;
   transition: background 0.2s;
@@ -329,18 +406,11 @@ background-color: var(--stone);
 
 .hero {
   width: 100%;
-  padding: 2rem 0 3rem;
+  padding: 2rem 0 1rem;
   text-align: center;
   border-bottom: 1px solid var(--sand);
   overflow-x: clip;
 }
-
-/* .hero {
-  background-image: filter(url('/src/assets/images/backdrop/pink-marble.png'), opacity(0.35));
-  background-color: var(--canvas);
-  background-repeat: repeat;
-  background-blend-mode: multiply; 
-} */
 
 .hero-tag {
   font-size: 0.85rem;
@@ -357,14 +427,14 @@ background-color: var(--stone);
   margin-bottom: 1.5rem;
 }
 
-.hero-desc {
+/* .hero-desc {
   font-size: 1.15rem;
   font-family: var(--font-sans);
   color: var(--cafe-au-lait);
   text-align: center;
   max-width: 600px;
   margin: 0 auto 2.5rem;
-}
+} */
 
 .hero-container {
   display: flex;
@@ -463,6 +533,18 @@ background-color: var(--stone);
   white-space: nowrap;
 }
 
+@media (max-width: 600px), (max-width: 960px) and (orientation: landscape) {
+  .hero-text {
+    padding: 0rem 0.75rem;
+    
+    /* Negative Y pulls it up over the top edge / down over the bottom edge */
+    --offset-y: -0.75rem; 
+    
+    /* Negative X reverses your calc() to push it INWARD from the left/right edges */
+    --offset-x: -1.5rem; 
+  }
+}
+
 /* Base positioning and animation triggers */
 .text-top-left,
 .text-bottom-right {
@@ -520,10 +602,175 @@ background-color: var(--stone);
 
 }
 
+@media (min-width: 601px) {
+  .hero-nav-strip {
+    font-weight: 400;
+    width: clamp(60%, 90vw, 1200px);
+    letter-spacing: clamp(0.05em, 0.8vw, 0.3em);
+    word-spacing: clamp(0.9rem, 3.2vw, 3rem);
+  }
+}
+
+@media (max-width: 600px), (max-width: 960px) and (orientation: landscape) {
+  .hero-tag {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero-nav-strip {
+    width: clamp(60%, 85vw, 900px);
+    margin-top: 1rem;
+    font-size: clamp(0.8rem, 1.4vw, 1rem);
+    letter-spacing: clamp(0.05em, 0.8vw, 0.3em);
+    word-spacing: clamp(0.9rem, 3.2vw, 3rem);
+  }
+}
+
 .hero-actions {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
+}
+
+/* --- Highlight Reel --- */
+
+/* --- Painted Feature Blocks --- */
+.feature-blocks {
+  padding: 0;
+  width: 100%;
+}
+
+/* Base Asymmetric Row: Image gets 1fr, Text gets 1.35fr */
+.feature-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  gap: 1rem;
+  align-items: top;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+/* Reverse Row: Text gets 1.35fr, Image gets 1fr */
+.feature-row.reverse {
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+}
+
+.feature-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Image & Button Overlap Logic */
+.feature-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.feature-image img {
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.feature-row:not(.reverse) .feature-image img {
+  justify-self: start;
+  transform: scale(1.2) translateX(-25px);
+}
+
+.feature-row.reverse .feature-image img {
+  justify-self: end;
+  max-height: none;
+  transform: scaleX(-1) scale(1.5);
+  margin-right: 14rem;
+}
+
+/* Base Text Assembly */
+/* The Combined Assembly Box */
+.feature-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Centers title & desc horizontally to each other */
+  text-align: center;       /* Centers multi-line paragraph text */
+  width: 100%;
+  max-width: 440px;         /* Keeps paragraph line-lengths comfortable */
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.feature-row:not(.reverse) .feature-text {
+  justify-self: end;
+}
+
+.feature-row.reverse .feature-text {
+  justify-self: start;
+}
+
+.feature-title {
+  font-family: var(--font-script);
+  font-size: clamp(2.8rem, 6vw, 8rem); /* Balanced ceiling to fit wide script lettering */
+  color: var(--espresso);
+  line-height: 0.9;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(var(--sand-rgb), 0.5);
+  white-space: nowrap; /* Prevents multi-line breaking */
+
+  text-shadow: 1px 0px 1px #FFF,
+  1px 2px 5px var(--cafe-au-lait);
+}
+
+.feature-desc {
+  font-family: 'Cormorant Garamond';
+  font-size: clamp(1rem, 1.65vw, 2rem);
+  color: var(--espresso);
+  max-width: 440px;
+  width: 100%;
+  background-color: var(--canvas);
+  border: 2px solid var(--old-gold);
+  border-radius: 5px; 
+  outline: 2px solid var(--old-gold);
+  outline-offset: -5px;
+  padding: 10px 10px;
+  margin-top: 1rem;
+}
+
+/* --- Responsive Stacking --- */
+@media (max-width: 768px) {
+  .feature-row,
+  .feature-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .feature-row:not(.reverse) .feature-image,
+  .feature-row.reverse .feature-image {
+    justify-self: center;
+    transform: none; /* Reset desktop scale factor on mobile */
+  }
+
+  .feature-text,
+  .feature-row:not(.reverse) .feature-text,
+  .feature-row.reverse .feature-text {
+    justify-self: center;
+  }
+
+  .feature-image img {
+    position: relative;
+    max-height: 28vh;
+    z-index: 0;
+  }
+
+  .feature-title {
+    font-size: clamp(2.5rem, 8vw, 3.8rem);
+    white-space: normal; /* Allow graceful wrap if screen width < 380px */
+  }
+
+  .feature-row.reverse .feature-image {
+    order: -1;
+  }
 }
 
 /* Menu Section */
@@ -543,6 +790,13 @@ background-color: var(--stone);
   grid-template-columns: repeat(2, 1fr);
   gap: 3.5rem 2.5rem;
   align-items: start;
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .menu-categories-grid {
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
 }
 
 .menu-category {
@@ -568,14 +822,6 @@ background-color: var(--stone);
   color: var(--old-gold);
   letter-spacing: normal;
 }
-
-/* RETIRED
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-} */
 
 /* Individual items stack vertically within their category */
 .menu-items-list {
@@ -625,6 +871,13 @@ background-color: var(--stone);
   text-align: center;
 }
 
+@media (max-width: 600px) and (orientation: portrait) {
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+}
+
 .info-card {
   padding: 0rem;
 }
@@ -641,117 +894,4 @@ background-color: var(--stone);
   padding: 2.25rem 0;
   font-size: 0.85rem;
   color: var(--cafe-au-lait);
-}
-
-/* --- Desktop and Tablet --- */
-@media (min-width: 601px) {
-  .mobile-hide {
-    display: inline;
-  }
-  .desktop-hide {
-    display: none;
-  }
-
-  .hero-nav-strip {
-    font-weight: 400;
-    width: clamp(60%, 90vw, 1200px);
-    letter-spacing: clamp(0.05em, 0.8vw, 0.3em);
-    word-spacing: clamp(0.9rem, 3.2vw, 3rem);
-  }
-
-  /* --- Desktop & Tablet Landscape Only --- */
-@media (min-width: 900px) {
-  
-  .logo-tagline {
-    display: inline-block;
-  }
-
-  .nav-links {
-    /* Pushes the navigation group against the right side */
-    margin-left: auto; 
-    margin-right: 3rem;
-    /* Increases the breathing room between navigation words */
-    gap: 3.5rem; 
-  }
-  
-  .btn-cta {
-    /* Ensures the CTA button doesn't crowd the last menu link */
-    margin-left: 3rem; 
-  }
-}
-}
-
-/* --- Mobile Universal --- */
-@media (max-width: 600px),
-(max-width: 960px) and (orientation: landscape) {
-  .hero-text {
-    padding: 0rem 0.75rem;
-    
-    /* Negative Y pulls it up over the top edge / down over the bottom edge */
-    --offset-y: -0.75rem; 
-    
-    /* Negative X reverses your calc() to push it INWARD from the left/right edges */
-    --offset-x: -1.5rem; 
-  }
-
-  .hero-tag {
-    margin-bottom: 2rem;
-  }
-  }
-
-/* --- Mobile Portrait --- */
-@media (max-width: 600px) and (orientation: portrait) {
-  .mobile-hide {
-    display: none;
-  }
-  .desktop-hide {
-    display: inline;
-  }
-  
-  .header {  
-    padding: 0 1rem;
-  }
-
-.menu-categories-grid {
-    grid-template-columns: 1fr;
-    gap: 0rem;
-  }
-  
-  .nav-links {
-    gap: 0.75rem;
-  }
-
-  .info-grid {
-    grid-template-columns: 1fr;
-    gap: 1.1rem;
-  }
-}
-
-/* --- Mobile Landscape (Strictly horizontal phones) --- */
-@media (max-height: 600px) and (orientation: landscape) {
-  .mobile-hide {
-    display: none;
-  }
-  .desktop-hide {
-    display: inline;
-  }
-
-  .header {  
-    padding: 0 4.5rem;
-  }
-
-  /* Add the notch inset on top of a baseline 1rem padding so it never evaluates to zero */
-  .container {
-    padding-left: calc(1rem + env(safe-area-inset-left));
-    padding-right: calc(1rem + env(safe-area-inset-right));
-  }
-  
-
-    .hero-nav-strip {
-    width: clamp(60%, 85vw, 900px);
-    margin-top: 1rem;
-    font-size: clamp(0.8rem, 1.4vw, 1rem);
-    letter-spacing: clamp(0.05em, 0.8vw, 0.3em);
-    word-spacing: clamp(0.9rem, 3.2vw, 3rem);
-  }
 }

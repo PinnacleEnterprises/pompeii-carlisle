@@ -139,6 +139,7 @@ h1, h2, h3, .brand-font {
   border-top: 1px solid var(--espresso-light);
   justify-self: center;
   margin: 1rem auto 1rem;
+  
 }
 
 /* -------------------- */
@@ -397,7 +398,7 @@ background-color: var(--stone);
   transition: color 0.2s;
 }
 
-.btn-cta:hover, .btn-nav: hover {
+.btn-cta:hover, .btn-nav:hover {
   background-color: var(--old-gold-dark);
   transition: color 0.2s
 }
@@ -440,7 +441,6 @@ background-color: var(--stone);
 /* .hero-desc {
   font-size: 1.15rem;
   font-family: var(--font-sans);
-  color: var(--cafe-au-lait);
   text-align: center;
   max-width: 600px;
   margin: 0 auto 2.5rem;
@@ -796,14 +796,24 @@ background-color: var(--stone);
 }
 
 /* Menu Section */
+
+
 .section {
   padding: 2rem 0;
+}
+
+.section .divider {
+  width: 60%; 
+  margin-top: 0; 
+  margin-bottom: 1.2rem; 
+  color: var(--color-espresso); 
+  opacity: 1 ;
 }
 
 .section-title {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Categories Grid (2 Columns on Desktop/Tablet Landscape) */

@@ -167,8 +167,6 @@ img {
 
 .watermark {
   position: absolute;
-  width: clamp(100px, 20vw, 180px);
-  height: clamp(100px, 20vw, 180px);
   opacity: 0.13;
   pointer-events: none;
   z-index: 0;
@@ -196,8 +194,14 @@ img {
 
 @media (max-width: 600px) and (orientation: portrait) {
   .header {
-    position: sticky;
+    /* position: sticky; */
     padding: 0 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .header {
+    /* position: sticky; */
   }
 }
 
@@ -339,7 +343,6 @@ font-size: clamp(0.9rem, 1.3vw, 10rem);
   /*   font-size: clamp(0.6rem, 3.25vw, 1.4rem); */
   font-size: clamp(1rem, 3vh, 1.6rem); /* Replaces 3.25vw */
   padding: 0.5rem 1.2rem;
-  margin-top: 1rem;
 }
 
 .btn-cta:active , .btn-nav:active{
@@ -475,6 +478,11 @@ background-color: var(--stone);
 
 /* -- Overlay Styles -- */
 
+.hero-image-wrapper .watermark {
+  width: clamp(100px, 14vw, 160px);
+  height: clamp(100px, 14vw, 160px);
+}
+
 .hero-overlay-left {
   top: 55%;
   left: -190px;
@@ -496,7 +504,7 @@ background-color: var(--stone);
 .hero-overlay-right {
   top: 35%; 
   right: -200px; 
-  transform: scaleX(-2.4) scaleY(3) rotate(-20deg);
+  transform: scaleX(-2.4) scaleY(3) scale(1.1) rotate(-20deg);
 
   background-color: var(--slate-blue);
 
@@ -678,7 +686,7 @@ background-color: var(--stone);
 .feature-row.reverse .feature-image img {
   justify-self: end;
   max-height: none;
-  transform: scaleX(-1) scale(1.5) translateY(-30px);
+  transform: scaleX(-1) scale(1.5) translateY(-50px);
   margin-right: 30px;
 }
 
@@ -735,6 +743,19 @@ background-color: var(--stone);
   border-radius: 5px; 
   padding: 25px 20px;
   margin-top: 1rem;
+}
+
+.feature-actions {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  margin-top: 1rem;
+}
+
+.feature-actions .btn-cta,
+.feature-actions .btn-lite {
+  margin-top: 1;
 }
 
 /* --- Responsive Stacking --- */

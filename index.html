@@ -6,6 +6,7 @@
     <title>Pompeii Italian Grill | Brick-Oven Pizza & Cocktails </title>
     <link rel="stylesheet" href="/src/style.css" />
   </head>
+
   <body>
     <!-- Header -->
     <header class="header">
@@ -13,6 +14,8 @@
         <a class="logo mask" href="/" aria-label="Pompeii Italian Grill home"></a>
         <span class="logo-tagline"> Italian Grill</span>
       </div>
+
+      <nav aria-label="Primary"></nav>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#menu">Menu</a></li>
@@ -23,23 +26,40 @@
             </a>
           </li>
         </ul>
-        <a href="tel:#" class="btn-nav phone-link">
+      </nav>
+
+        <a href="tel:#" data-phone-link class="btn-nav">
           <span class="mobile-hide">Call to Order</span>
           <span class="desktop-hide">Call Us</span>
         </a>
+
     </header>
+
+    <main>
 
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-container">
-        <p class="hero-tag">Carlisle, Pennsylvania</p>
+        <p class="hero-tag">
+          Italian <span class="mobile-hide">Restaurant</span>
+          <span class="desktop-hide">Grill</span>
+          &middot; Carlisle, Pennsylvania
+        </p>
+        
         <!-- Dominant Image & Overlapping Animated Text -->
         <div class="hero-image-wrapper">
           <div class="watermark mask hero-overlay-left mobile-hide"  aria-hidden="true"></div>
           <h1 class="hero-text text-top-left">Italian Classics</h1>
-          <img class="img-pop img-hero" src="/src/assets/images/Carbonara.jpeg" alt="Fresh pasta and cherry tomatoes" />
+          <img class="img-pop img-hero" 
+            src="/src/assets/images/Carbonara.jpeg" 
+            alt="Pasta Carbonara with stringy cheese served at a table." />
           <h1 class="hero-text text-bottom-right">Served Fresh</h1>
           <div class="watermark mask hero-overlay-right mobile-hide"  aria-hidden="true"></div>
+        </div>
+
+        <div class="action-row">
+          <a href="#menu" class="btn-lite btn-stroke">Full Menu</a>
+          <a href="#" data-phone-link class="btn-cta btn-stroke">Order Now</a>
         </div>
 
         <!-- Horizontal Category Strip -->
@@ -59,9 +79,9 @@
               <div class="feature-text">
                 <h2 class="feature-title"><!--span class="feature-symbol symbol leaf">❧</span-->Familiar Favorites</h2>
                 <p class="feature-desc">Authentic, hand-crafted, brick-oven pizza, savory pasta with housemade sauces, and fresh antipasti served in a warm, welcoming setting.</p>
-                <div class="feature-actions">
+                <div class="action-row">
                   <a href="#menu" class="btn-lite btn-stroke">Full Menu</a>
-                  <a href="tel:#" class="btn-cta btn-stroke phone-link">Order Now</a>
+                  <a href="tel:#" class="btn-cta btn-stroke" data-phone-link>Order Now</a>
                 </div>
               </div>
             </div>
@@ -71,7 +91,6 @@
               <div class="feature-text">
                 <h2 class="feature-title">Fresh Ingredients</h2>
                 <p class="feature-desc">Our timeless recipes are prepared with only the freshest ingredients. We treat every dish just as we would when feeding our own family. </p>
-                <!--a href="tel:#" class="btn-cta btn-stroke phone-link">Place an Order</a-->
               </div>
               <div class="feature-image">
                 <img src="/src/assets/images/paint/Melone.png" alt="Fresh antipasti spread" />
@@ -141,9 +160,9 @@
     <section id="location" class="info-section">
       <div class="container info-grid">
         <div class="info-card">
-          <h3>Location</h3>
+          <h3>Information</h3>
           <p>Carlisle, PA</p>
-          <p><a href="tel:#" class="phone-link phone-display"></a></p>
+          <p><a href="tel:#" data-phone-link data-phone-display></a></p>
         </div>
         <div class="info-card">
           <h3>Kitchen Hours</h3>
@@ -155,10 +174,12 @@
         <div class="info-card">
           <h3>Reservations</h3>
           <p>Walk-ins welcome.</p>
-          <p>For parties of 6 or more, please <span class="link"><a href="tel:#">call</a></span> ahead.</p>
+          <p>For parties of 6 or more, please <span class="link"><a href="tel:#" data-phone-link>call</a></span> ahead.</p>
         </div>
       </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

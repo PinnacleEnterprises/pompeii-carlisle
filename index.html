@@ -41,7 +41,7 @@
     <section id="hero" class="hero">
       <div class="container">
         <h1 class="hero-tag">
-          Italian <span class="mobile-hide">Restaurant</span>
+          Italian <span class="mobile-hide">Restaurant & Bar</span>
           <span class="desktop-hide">Grill</span>
           &middot; Carlisle, Pennsylvania
         </h1>
@@ -71,111 +71,93 @@
     </section>
 
     <section id="utility" class="utility-strip">
-      <div class="container info-grid">
-        <div class="info-card">
-          <h2>Information</h2>
-          <p>Carlisle, PA</p>
-          <p><a href="tel:#" data-phone-link data-phone-display></a></p>
-        </div>
-        <div class="info-card">
-          <h2>Kitchen Hours</h2>
-          <p>Tue – Thu: 4:00 PM – 9:00 PM</p>
-          <p>Fri – Sat: 4:00 PM – 10:00 PM</p>
-          <p>Sun: 12:00 PM – 8:00 PM</p>
-          <p>Monday: Closed</p>
-        </div>
-        <div class="info-card">
-          <h2>Reservations</h2>
-          <p>Walk-ins welcome.</p>
-          <p>For parties of 6 or more, please <a class="link" href="tel:#" data-phone-link>call</a> ahead.</p>
-        </div>
+      <div class="container utility-row">
+        <a class="link" href="#" data-address-link>
+          2 A St, Carlisle, PA
+        </a>
+
+
+        <span data-hours-status></span>
       </div>
     </section>
 
     <!-- Painted Feature Blocks -->
-    <section class="feature-blocks">
-      <div class="container">
-    
-        <!-- Block 1: Familiar Favorites (Image Left, Text Right) -->
-        <div class="feature-row">
-          <div class="feature-image">
-           <img src="/src/assets/images/paint/Carbonara.png" alt="Hand-crafted pasta" />
-           </div>
-           <div class="feature-text">
-            <h2 class="feature-title">Familiar Favorites</h2>
-            <p class="feature-desc">Authentic, hand-crafted, brick-oven pizza, savory pasta with housemade sauces, and fresh antipasti served in a warm, welcoming setting.</p>              
-            <div class="action-row">
-              <a href="#menu" class="btn-lite--stroke">Full Menu</a>
-              <a href="tel:#" class="btn--stroke" data-phone-link>Order Now</a>
-            </div>
-          </div>
-        </div>
+<!-- Painted Feature Blocks -->
+<section class="feature-blocks">
+  <div class="container">
 
-        <!-- Block 2: Fresh Ingredients (Text Left, Image Right) -->
-        <div class="feature-row reverse">
-           <div class="feature-text">
-            <h2 class="feature-title">Fresh Ingredients</h2>
-            <p class="feature-desc">Our timeless recipes are prepared with only the freshest ingredients. We treat every dish just as we would when feeding our own family. </p>
-          </div>
-          <div class="feature-image">
-            <img src="/src/assets/images/paint/Melone.png" alt="Fresh antipasti spread" />
-          </div>
-        </div>
-
+    <!-- Block 1: Familiar Favorites -->
+    <div class="feature-row">
+      <div class="feature-image">
+        <img
+          src="/src/assets/images/paint/Pizza.png"
+          alt="Brick-oven pizza"
+        />
       </div>
-    </section>
+
+      <div class="feature-text">
+        <h2 class="feature-title">Familiar Favorites</h2>
+
+        <p class="feature-desc">
+          <span class="mobile-hide">
+            Authentic, hand-crafted, brick-oven pizza, savory pasta with housemade sauces, and fresh antipasti served in a warm, welcoming setting.
+          </span>
+          <span class="desktop-hide">
+            Brick-oven pizza, savory pasta, and fresh antipasti.
+          </span>
+        </p>
+
+        <div class="action-row">
+          <a href="#menu" class="btn-lite--stroke">Full Menu</a>
+          <a href="tel:#" class="btn--stroke" data-phone-link>Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 2: Fresh Ingredients -->
+    <div class="feature-row reverse">
+      <div class="feature-text">
+        <h2 class="feature-title">Fresh Ingredients</h2>
+
+        <p class="feature-desc">
+          <span class="mobile-hide">
+            Our timeless recipes are prepared with only the freshest ingredients. We treat every dish just as we would when feeding our own family.
+          </span>
+          <span class="desktop-hide">
+            Fresh ingredients and timeless recipes, made with care.
+          </span>
+        </p>
+      </div>
+
+      <div class="feature-image">
+        <img
+          src="/src/assets/images/paint/Melone.png"
+          alt="Fresh antipasti spread"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
 
     <!-- Menu -->
-    <section id="menu" class="section">
+    <section id="menu" class="menu">
       <div class="container">
-        <h2 class="section-title"><span class="symbol">&#x1f65A;</span> Menu <span class="symbol">&#x1f658;</span></h2>
-        <div class="divider" aria-hidden="true"></div>
-        <div class="menu-categories-grid">
-              <!-- Category 1 -->
-              <div class="menu-category">
-                <h3 class="category-title">Antipasti</h3>
-                <div class="menu-items-list">
-                  <div class="menu-item">
-                    <div class="item-header">
-                      <span class="item-name">Melone e Prosciutto</span>
-                      <span class="item-price">$14.00</span>
-                    </div>
-                    <p class="item-desc">Aged prosciutto di Parma, ripe seasonal cantaloupe, balsamic glaze reduction.</p>
-                  </div>
-                  <div class="menu-item">
-                    <div class="item-header">
-                      <span class="item-name">Bruschetta Rustica</span>
-                      <span class="item-price">$10.50</span>
-                    </div>
-                    <p class="item-desc">Toasted garlic bread, vine tomatoes, sweet basil, extra virgin olive oil.</p>
-                  </div>
-                </div>
-              </div>
 
-          <div class="menu-category">
-            <h3 class="category-title">
-              Pizze <span class="category-subtitle">~  Dal Forno a Mattone</span>
-            </h3>
-              <!-- Pizza items go here -->
-               <div class="menu-items-list">
-                  <div class="menu-item">
-                    <div class="item-header">
-                      <span class="item-name">Margherita <i>D.O.P.</i></span>
-                      <span class="item-price">$18.00</span>
-                    </div>
-                    <p class="item-desc">San Marzano tomatoes, fresh mozzarella, fresh sweet basil, olive oil.</p>
-                  </div>
-            <div class="menu-item">
-              <div class="item-header">
-                <span class="item-name">Diavola</span>
-                <span class="item-price">$20.50</span>
-              </div>
-              <p class="item-desc">Spicy soppressata, crushed red chili, house tomato sauce, fresh mozzarella.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <h2 class="title">
+          <span class="symbol">&#x1f65A;</span>
+          Menu
+          <span class="symbol">&#x1f658;</span>
+        </h2>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <p class="advisory">
+          <span class="advisory-mark" aria-hidden="true">*</span>
+          Some items are served raw or may be cooked to order. Consuming raw or undercooked foods may increase risk of foodborne illness.
+        </p>
+
+        <div class="categories" data-menu-categories></div>
     </section>
 
     <!-- Hours & Location -->
@@ -183,20 +165,22 @@
       <div class="container info-grid">
         <div class="info-card">
           <h2>Information</h2>
-          <p>Carlisle, PA</p>
-          <p><a href="tel:#" data-phone-link data-phone-display></a></p>
+          <a class="link" href="#" data-address-link>
+          2 A St, Carlisle, PA
+          </a>
+          <p><a href="tel:#" class="link"data-phone-link data-phone-display></a></p>
         </div>
         <div class="info-card">
-          <h2>Kitchen Hours</h2>
-          <p>Tue – Thu: 4:00 PM – 9:00 PM</p>
-          <p>Fri – Sat: 4:00 PM – 10:00 PM</p>
-          <p>Sun: 12:00 PM – 8:00 PM</p>
-          <p>Monday: Closed</p>
+          <h2>Hours</h2>
+          <p><strong>Sun – Thu:</strong> 
+          <br>11 AM – 11 PM</p>
+          <p><strong>Fri – Sat:</strong>
+            <br>11 AM – 12 AM</p>
         </div>
         <div class="info-card">
           <h2>Reservations</h2>
           <p>Walk-ins welcome.</p>
-          <p>For parties of 6 or more, please <a class="link" href="tel:#" data-phone-link>call</a> ahead.</p>
+          <p>For parties of 6+, please <a class="link" href="tel:#" data-phone-link>call</a> ahead.</p>
         </div>
       </div>
     </section>
@@ -211,5 +195,6 @@
     </footer>
 
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/menu.js"></script>
   </body>
 </html>

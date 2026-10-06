@@ -1,0 +1,959 @@
+{
+  "sections": [
+    {
+      "id": "starters",
+      "title": "Antipasti",
+      "order": 1,
+      "subtitle": "Small plates",
+      "entries": [
+        {
+          "type": "item",
+          "name": "Bruschetta Tradizionale",
+          "description": "Toasted bread drizzled with extra virgin olive oil and seasoning, topped with fresh diced tomatoes, basil and fresh mozzarella",
+          "price": "12.99"
+        },
+        {
+          "type": "item",
+          "name": "Bruschetta Di Mare",
+          "description": "Toasted bread topped with jumbo lump crab meat, shrimp, and diced tomatoes in a Pompeii vodka sauce",
+          "price": "14.99"
+        },
+        {
+          "type": "item",
+          "name": "Meatballs",
+          "description": "3-3oz meatballs. Traditional marinara, Vodka sauce, Marsala Sauce",
+          "price": "14.99"
+        },
+        {
+          "type": "item",
+          "name": "Calamari Fritti",
+          "description": "Fresh Calamari cut into bite sized rings and tentacles, lightly dusted in flour and deep-fried until golden and crispy",
+          "price": "13.99"
+        },
+        {
+          "type": "item",
+          "name": "Seafood Gambino",
+          "description": "Mussels, clams, and shrimp sauteed in a garlic white wine sauce with Italian herbs served over crostini bread",
+          "price": "16.99"
+        },
+        {
+          "type": "item",
+          "name": "Shrimp Cocktail",
+          "description": "Jumbo Shrimp served with a zesty, savory cocktail sauce",
+          "price": "14.99"
+        },
+        {
+          "type": "item",
+          "name": "Clams Sude",
+          "description": "Clams sautéed in a garlic white wine sauce, Italian herbs and served over crostini bread",
+          "price": "14.99"
+        },
+        {
+          "type": "item",
+          "name": "Eggplant Rollatini",
+          "description": "Eggplant rolled with basil, fresh mozzarella, ricotta, baked with marinara sauce and topped with fresh mozzarella",
+          "price": "12.99"
+        },
+        {
+          "type": "item",
+          "name": "Tuna Tartare",
+          "description": "Fresh sushi grade ahi tuna tossed with avocado, cucumber, capers, shallots, lemon, extra virgin olive oil, and herbs. Finished with balsamic glaze and served with toasted crostini",
+          "price": "15.99",
+          "advisory": true
+        },
+        {
+          "type": "item",
+          "name": "Grilled Octopus",
+          "description": "Fresh grilled octopus, arugula, fire roasted yellow and red peppers with a balsamic glaze",
+          "price": "15.99"
+        },
+        {
+          "type": "item",
+          "name": "Zuppa Di Cozze",
+          "description": "Fresh mussels and octopus, splash of white wine, simmered in a garlic marinara sauce",
+          "price": "16.99"
+        },
+        {
+          "type": "item",
+          "name": "Melone e Prosciutto e Parmigiano-Reggiano",
+          "description": "Cantaloupe wrapped with Prosciutto Di Parma and imported Reggiano",
+          "price": "16.99"
+        },
+        {
+          "type": "item",
+          "name": "Mozzarella in Carrozza",
+          "description": "Homemade breaded and fried mozzarella served with marinara sauce",
+          "price": "14.99"
+        },
+        {
+          "type": "item",
+          "name": "Mozzarella Caprese",
+          "description": "Fresh mozzarella, fresh tomatoes drizzled with extra virgin olive oil, Italian herbs, fresh basil and topped with Modena balsamic glaze",
+          "price": "14.99"
+        },
+        {
+          "type": "item",
+          "name": "Antipasto Italiano",
+          "description": "Mixture of Imported meats, imported cheeses, seasoned vegetables, assorted olives and rosemary olive oil flat bread",
+          "price": "24"
+        }
+      ]
+    },
+    {
+      "id": "insalata",
+      "title": "Insalata",
+      "order": 2,
+      "extras": [
+        {
+          "name": "with Grilled Chicken",
+          "price": "6"
+        },
+        {
+          "name": "with Grilled Salmon",
+          "price": "10"
+        },
+        {
+          "name": "with Grilled Shrimp",
+          "price": "9"
+        },
+        {
+          "name": "with Grilled Steak",
+          "price": "12",
+          "advisory": true
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "Caesar Salad",
+          "description": "Crisp romaine hearts, shaved Parmigiano-Reggiano, croutons, and a creamy Caesar dressing",
+          "price": "11"
+        },
+        {
+          "type": "item",
+          "name": "Greek Salad",
+          "description": "Crisp romaine and mixed greens, vine ripened tomatoes, cucumbers, red onions, kalamata olives, feta cheese, oregano served with a greek vinaigrette",
+          "price": "15"
+        },
+        {
+          "type": "item",
+          "name": "Arugula & Pear Salad",
+          "description": "Fresh Arugula, sliced pears, candied walnuts, crumbled gorgonzola cheese, dried cranberries, and balsamic vinaigrette",
+          "price": "15"
+        },
+        {
+          "type": "item",
+          "name": "Mediterranean Salad",
+          "description": "Mixed greens, cucumbers, cherry tomatoes, roasted yellow and red peppers, green olives, red onions, gorgonzola cheese, and our lemon oregano vinaigrette",
+          "price": "15"
+        }
+      ]
+    },
+    {
+      "id": "panini",
+      "title": "Panini",
+      "order": 3,
+      "notes": [
+        "Served with chips"
+      ],
+      "extras": [
+        {
+          "name": "Add Fries",
+          "price": "3"
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "Caprese",
+          "description": "Fresh mozzarella, tomato, basil, extra virgin olive oil, balsamic glaze",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Mortadella e Burrata",
+          "description": "Imported mortadella, fresh burrata, sautéed baby spinach in garlic & oil",
+          "price": "16"
+        },
+        {
+          "type": "item",
+          "name": "Prosciutto e Mozzarella",
+          "description": "Prosciutto Di Parma, fresh mozzarella, arugula, fire roasted yellow and red pepper",
+          "price": "16"
+        },
+        {
+          "type": "item",
+          "name": "Portobello Mushroom Burger",
+          "description": "8oz black Angus beef, portobello mushrooms, Swiss cheese",
+          "price": "16",
+          "advisory": true
+        },
+        {
+          "type": "item",
+          "name": "Chicken Florentino",
+          "description": "Grilled chicken, sautéed zucchini, auricchio cheese, tomatoes, extra virgin olive oil",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Chicken Parmigiana",
+          "description": "Homemade thin chicken cutlets, marinara sauce and topped with mozzarella cheese, reggiano cheese and fresh basil",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Meatball Parmigiana",
+          "description": "Homemade meatballs, marinara sauce and topped with mozzarella cheese, reggiano cheese and fresh basil",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Pompeii",
+          "description": "Grilled sausage, sautéed diced eggplant and tomatoes, extra virgin olive oil, melted provolone cheese",
+          "price": "15"
+        }
+      ]
+    },
+    {
+      "id": "brick-oven-pizza",
+      "title": "Brick Oven Pizza",
+      "order": 4,
+      "extras": [
+        {
+          "name": "Cauliflower Crust",
+          "price": "3"
+        },
+        {
+          "name": "Gluten Free Crust",
+          "price": "3"
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "Margherita (La Regina)",
+          "description": "Mozzarella, basil, extra virgin olive oil, marinara sauce",
+          "price": "13"
+        },
+        {
+          "type": "item",
+          "name": "Regina e Arugula",
+          "description": "Mozzarella, basil, extra virgin olive oil, marinara sauce, arugula",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Bianca",
+          "description": "Garlic, ricotta, mozzarella, parmigiano-reggiano",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Capricciosa",
+          "description": "Ham, mushroom, artichoke, basil, extra virgin olive oil, marinara sauce",
+          "price": "15"
+        },
+        {
+          "type": "item",
+          "name": "Stadio",
+          "description": "Mozzarella, Italian crumble sausage, broccoli rabe",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Vesuvio",
+          "description": "Italian crumble sausage, fresh diced eggplant, basil, mozzarella, marinara sauce",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Domenica",
+          "description": "Sunday sauce, mini meatballs, basil, topped with burrata cheese",
+          "price": "15"
+        },
+        {
+          "type": "item",
+          "name": "Diavolo",
+          "description": "Cherry tomatoes, garlic, mozzarella, spicy salami, spicy seasonings, marinara sauce",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Pistachio",
+          "description": "Cream of pistachio, bacon, sun-dried tomatoes",
+          "price": "15"
+        },
+        {
+          "type": "item",
+          "name": "Cappella",
+          "description": "Sliced hot dogs, French fries, mozzarella",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Pompeii",
+          "description": "Prosciutto, arugula, cherry tomato, mozzarella, extra virgin olive oil, sliced almonds",
+          "price": "16"
+        },
+        {
+          "type": "item",
+          "name": "Tradizionale Calzone",
+          "description": "Ham, ricotta, mozzarella, basil, black pepper",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Fried Calzone",
+          "description": "Original Neapolitan street food, deep fried calzone",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Seafood",
+          "description": "Fresh calamari, shrimp, fresh basil, mozzarella, garlic marinara sauce",
+          "price": "17"
+        },
+        {
+          "type": "item",
+          "name": "Nutella",
+          "description": "Pizza crust topped with Nutella chocolate spread and powdered sugar",
+          "price": "14"
+        }
+      ]
+    },
+    {
+      "id": "from-the-grill",
+      "title": "From the Grill",
+      "order": 5,
+      "notes": [
+        "Served with 2 sides and your choice of soup or salad."
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "New York Strip | 12oz",
+          "description": "A hand cut USDA New York Strip, expertly seasoned and grilled for a rich, bold beef flavor with a perfectly seared crust",
+          "price": "28",
+          "advisory": true
+        },
+        {
+          "type": "item",
+          "name": "Filet Mignon | 8oz",
+          "description": "Our most tender cut of beef, hand selected and grilled to perfection. Lean, buttery, and exceptionally tender",
+          "price": "32",
+          "advisory": true
+        },
+        {
+          "type": "item",
+          "name": "Porterhouse | 24oz",
+          "description": "The ultimate steakhouse classic featuring a tender filet and flavorful New York Strip separated by the signature T-bone. Perfect for serious steak lovers",
+          "price": "43",
+          "advisory": true
+        },
+        {
+          "type": "item",
+          "name": "Tomahawk Pork Chop | 14oz",
+          "description": "A thick cut, bone-in pork chop, expertly seasoned and grilled over an open flame for exceptional flavor and tenderness.",
+          "price": "28",
+          "advisory": true
+        },
+        {
+          "type": "item",
+          "name": "Center Cut Frenched Pork Chops | 12oz",
+          "description": "Two premium Frenched center-cut pork chops, grilled until juicy and finished with our signature seasoning blend",
+          "price": "22",
+          "advisory": true
+        },
+        {
+          "type": "item",
+          "name": "Lamb Lollipops",
+          "description": "Premium lamb chops seasoned with fresh herbs, garlic, and olive oil then grilled to your preferred temperature for a tender, flavorful finish",
+          "price": "42",
+          "advisory": true
+        },
+        {
+          "type": "item",
+          "name": "Octopus Luciana",
+          "description": "Grilled Octopus then sautéed in a garlic marinara sauce, capers, kalamata olives, cherry tomatoes and Italian herbs",
+          "price": "29"
+        },
+        {
+          "type": "item",
+          "name": "Blackened Atlantic Salmon",
+          "description": "Fresh Atlantic Salmon coated in our house blackening seasoning and flame grilled, served moist and flaky with a hint of smoky spice",
+          "price": "24"
+        },
+        {
+          "type": "item",
+          "name": "Grilled Italian Sausage",
+          "description": "Sautéed onions, peppers, splash of white wine, garlic marinara sauce",
+          "price": "18"
+        },
+        {
+          "type": "item",
+          "name": "Chilean Sea Bass | 8oz",
+          "description": "Delicate, buttery Chilean sea bass, lightly seasoned and grilled until perfectly flaky and tender.",
+          "price": "42"
+        }
+      ]
+    },
+    {
+      "id": "tradizionale",
+      "title": "Tradizionale",
+      "order": 6,
+      "notes": [
+        "All entrees include your choice of caesar or garden salad"
+      ],
+      "extras": [
+        {
+          "name": "Soup of the Day",
+          "price": "3"
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "Pappardelle Bolognese",
+          "description": "Pappardelle pasta tossed in our slow simmered homemade Bolognese sauce",
+          "price": "22"
+        },
+        {
+          "type": "item",
+          "name": "Penne Carbonara",
+          "description": "Penne pasta with crispy guanciale, sweet peas, and our rich, creamy homemade carbonara sauce",
+          "price": "20"
+        },
+        {
+          "type": "item",
+          "name": "Lasagna",
+          "description": "Layers of pasta, homemade Bolognese, ricotta, mozzarella, Parmigiano-Reggiano, basil, and egg yolk, baked in our homemade marinara sauce",
+          "price": "21"
+        },
+        {
+          "type": "item",
+          "name": "Cannelloni",
+          "description": "Pasta tubes filled with a blend of ricotta, mozzarella, Parmesan, and herbs, baked in our homemade marinara sauce",
+          "price": "20"
+        },
+        {
+          "type": "item",
+          "name": "Penne Alla Pesto",
+          "description": "Penne pasta tossed in our house-made basil pesto with extra virgin olive oil and freshly grated Parmesan",
+          "price": "20"
+        },
+        {
+          "type": "item",
+          "name": "Penne Alla Vodka",
+          "description": "Penne pasta tossed in our signature creamy vodka sauce, finished with Parmesan and fresh basil",
+          "price": "20"
+        },
+        {
+          "type": "item",
+          "name": "Spaghetti & Meatball",
+          "description": "Classic spaghetti served with our slow simmered Sunday sauce and homemade Italian meatballs",
+          "price": "20"
+        },
+        {
+          "type": "item",
+          "name": "Penne Pomodoro",
+          "description": "Penne pasta sautéed with cherry tomatoes, fresh garlic, extra virgin olive oil, basil, and a splash of white wine",
+          "price": "21"
+        },
+        {
+          "type": "item",
+          "name": "Nonna’s Eggplant Parmigiana",
+          "description": "Our family recipe featuring layers of hand breaded eggplant, homemade marinara, melted mozzarella, and parmesan, served with a side of spaghetti in our Sunday sauce",
+          "price": "24"
+        },
+        {
+          "type": "item",
+          "name": "Gnocchi Sorrento",
+          "description": "Pillowy potato gnocchi baked in our homemade Sunday sauce with fresh mozzarella, Parmigiano-Reggiano, and basil",
+          "price": "21"
+        },
+        {
+          "type": "item",
+          "name": "Aglio e Olio",
+          "description": "Spaghetti tossed with extra virgin olive oil, fresh garlic, herbs, toasted pine nuts, and sweet raisins for a Sicilian inspired twist",
+          "price": "20"
+        },
+        {
+          "type": "item",
+          "name": "Spinach Ravioli in Vodka Sauce",
+          "description": "Delicate spinach and ricotta ravioli tossed in our signature creamy homemade vodka sauce and finish with Parmesan",
+          "price": "22"
+        },
+        {
+          "type": "item",
+          "name": "Fettuccine Alla Alfredo",
+          "description": "Fettuccine pasta tossed in our homemade rich creamy Alfredo sauce",
+          "price": "20"
+        },
+        {
+          "type": "item",
+          "name": "Short Rib Pappardelle",
+          "description": "Slow braised beef short ribs served over pappardelle pasta in our rich homemade Genovese sauce, finished with Parmigiano-Reggiano",
+          "price": "29"
+        },
+        {
+          "type": "item",
+          "name": "Stuffed Shells",
+          "description": "Jumbo pasta shells filled with a creamy blend of ricotta, mozzarella, Parmigiano-Reggiano, and fresh herbs, baked in our homemade marinara sauce and topped with melted mozzarella",
+          "price": "21"
+        }
+      ]
+    },
+    {
+      "id": "pollo",
+      "title": "Pollo",
+      "order": 7,
+      "notes": [
+        "All entrees include your choice of caesar or garden salad"
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "Chicken Piccata",
+          "description": "Tender chicken breast sautéed with garlic and capers in a bright white wine lemon butter sauce, served over angel hair pasta",
+          "price": "24"
+        },
+        {
+          "type": "item",
+          "name": "Chicken Marsala",
+          "description": "Chicken breast sautéed with garlic and portobello mushrooms in a rich Marsala wine sauce, served over angel hair pasta",
+          "price": "24"
+        },
+        {
+          "type": "item",
+          "name": "Chicken Leg Cacciatore",
+          "description": "Tender chicken leg slow simmered with red onions bell peppers, portobello mushrooms, and cherry tomatoes in our garlic marinara sauce with a splash of white wine, served over angel hair pasta",
+          "price": "26"
+        },
+        {
+          "type": "item",
+          "name": "Chicken Parmigiana",
+          "description": "Hand breaded chicken breast topped with our homemade marinara, melted mozzarella, and fresh basil, served over angel hair pasta.",
+          "note": "Also available in our signature POMPEII VODKA Sauce",
+          "price": "24"
+        },
+        {
+          "type": "item",
+          "name": "Chicken Caprese",
+          "description": "Chicken breast sautéed with cherry tomatoes and fresh basil in a light garlic white wine sauce, topped with fresh mozzarella and served over angel hair pasta",
+          "price": "24"
+        },
+        {
+          "type": "item",
+          "name": "Chicken Alfredo",
+          "description": "Grilled chicken breast served over fettuccine pasta tossed in our rich, house made Alfredo sauce",
+          "price": "24"
+        },
+        {
+          "type": "item",
+          "name": "Chicken Francese",
+          "description": "Lightly egg battered chicken breast sautéed in a delicate white wine, butter, garlic, and fresh lemon sauce, served over angel hair pasta",
+          "price": "25"
+        }
+      ]
+    },
+    {
+      "id": "vitello",
+      "title": "Vitello",
+      "order": 8,
+      "notes": [
+        "All entrees include your choice of caesar or garden salad"
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "Veal Marsala",
+          "description": "Tender medallions of veal sautéed with garlic and portobello mushrooms in a rich Marsala wine sauce, served over angel hair pasta",
+          "price": "28"
+        },
+        {
+          "type": "item",
+          "name": "Veal Piccata",
+          "description": "Lightly floured veal sautéed with garlic and capers in a bright white wine lemon butter sauce, served over angel hair pasta",
+          "price": "28"
+        },
+        {
+          "type": "item",
+          "name": "Veal Saltimbocca",
+          "description": "Tender Veal sautéed with garlic, fresh tomatoes, and sun-dried tomatoes in a delicate white wine sauce, topped with prosciutto and melted mozzarella, served over angel hair pasta",
+          "price": "28"
+        },
+        {
+          "type": "item",
+          "name": "Veal Francese",
+          "description": "Egg battered veal lightly sautéed in a delicate white wine, butter, and fresh lemon sauce, served over angel hair pasta",
+          "price": "28"
+        },
+        {
+          "type": "item",
+          "name": "Veal Parmigiana",
+          "description": "Breaded veal topped with our house marinara, melted mozzarella, and fresh basil, served over angel hair pasta. Also available in POMPEII VODKA Sauce",
+          "price": "28"
+        },
+        {
+          "type": "item",
+          "name": "Veal Chop Pompeii",
+          "description": "A premium bone-in veal chop, lightly breaded and pan-fried, topped Parmigiani style with our signature Pompeii Vodka Sauce and melted mozzarella",
+          "price": "45",
+          "advisory": true
+        },
+        {
+          "type": "item",
+          "name": "Veal Chop Milanese",
+          "description": "A premium bone-in veal chop, lightly breaded and pan-fried until golden brown, served with a fresh arugula salad tossed in lemon vinaigrette and shaved Parmesan",
+          "price": "45",
+          "advisory": true
+        }
+      ]
+    },
+    {
+      "id": "dal-mare",
+      "title": "Dal Mare",
+      "order": 9,
+      "notes": [
+        "All come with choice of caesar salad or garden salad"
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "Misto Di Mare",
+          "description": "Linguine pasta, clams, mussels, shrimp, sea scallops, extra virgin olive oil, in a white wine sauce",
+          "price": "24"
+        },
+        {
+          "type": "item",
+          "name": "Farfalle Al Salmone",
+          "description": "Butterfly pasta with a creamy Alfredo sauce that is infused with salmon",
+          "price": "24"
+        },
+        {
+          "type": "item",
+          "name": "Pistachio Al Salmone",
+          "description": "Pistachio crusted salmon with polenta, spinach and brown butter",
+          "price": "24"
+        },
+        {
+          "type": "item",
+          "name": "Pappardelle Shrimp Alfredo",
+          "description": "Pappardelle pasta, shrimp, in a creamy alfredo sauce",
+          "price": "25"
+        },
+        {
+          "type": "item",
+          "name": "Pappardelle Crab Alfredo",
+          "description": "Pappardelle pasta, Jumbo Lump Crab meat in a creamy alfredo sauce",
+          "price": "25"
+        },
+        {
+          "type": "item",
+          "name": "Shrimp Scampi",
+          "description": "Linguine pasta, sautéed garlic in a butter, lemon wine sauce with a touch of paprika",
+          "price": "25"
+        },
+        {
+          "type": "item",
+          "name": "Seafood Trio Pompeii",
+          "description": "Fettuccine pasta, Shrimp, scallops, crab, kalamata olives, sun-dried tomatoes, in a light pesto sauce",
+          "price": "28"
+        },
+        {
+          "type": "item",
+          "name": "Red Snapper Puttanesca",
+          "description": "Linguine pasta, 8oz Red Snapper, kalamata olives, sun-dried tomatoes, capers, splash of white wine, garlic marinara sauce",
+          "price": "27"
+        },
+        {
+          "type": "item",
+          "name": "Shrimp Francese",
+          "description": "Linguine pasta, shrimp dipped in eggs & flour then sautéed in white wine sauce with a splash of lemon",
+          "price": "27"
+        },
+        {
+          "type": "item",
+          "name": "Fettuccine Cappellese",
+          "description": "Fettuccine pasta, Jumbo lump crab, shrimp, asparagus, in a vodka sauce",
+          "price": "28"
+        },
+        {
+          "type": "item",
+          "name": "Lobster Ravioli",
+          "description": "Lobster & ricotta filled ravioli in our homemade Pompeii vodka sauce",
+          "price": "27"
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "title": "Sides",
+      "order": 10,
+      "entries": [
+        {
+          "type": "group",
+          "label": "Add a Side",
+          "price": "6",
+          "items": [
+            {
+              "name": "Garden Salad"
+            },
+            {
+              "name": "Caesar Salad"
+            },
+            {
+              "name": "Sautéed Garlic Broccoli"
+            },
+            {
+              "name": "Baked Potato"
+            },
+            {
+              "name": "Mashed Potato"
+            },
+            {
+              "name": "Grilled Asparagus"
+            },
+            {
+              "name": "Sautéed Spinach"
+            },
+            {
+              "name": "Broccoli Rabe"
+            },
+            {
+              "name": "Steak Fries"
+            },
+            {
+              "name": "Brussels Sprouts"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cocktails",
+      "title": "Cocktails",
+      "order": 11,
+      "entries": [
+        {
+          "type": "item",
+          "name": "Aperol Spritz",
+          "description": "Aperol, prosecco, club soda",
+          "price": "15"
+        },
+        {
+          "type": "item",
+          "name": "Amalfi Spritz",
+          "description": "Limoncello, basil syrup, club soda, prosecco",
+          "price": "15"
+        },
+        {
+          "type": "item",
+          "name": "Limon Drop Martini",
+          "description": "Limoncello, vodka, Cointreau, lemon juice, simple syrup",
+          "price": "15",
+          "order": 99
+        },
+        {
+          "type": "item",
+          "name": "Pompeii Martini",
+          "description": "Vanilla vodka, Pompeii syrup, lime juice, passion liqueur",
+          "price": "15",
+          "order": 99
+        },
+        {
+          "type": "item",
+          "name": "Pomtini",
+          "description": "Vodka, Cointreau, pomegranate liqueur, pomegranate juice, lime juice",
+          "price": "15"
+        },
+        {
+          "type": "item",
+          "name": "Tiramisu Martini",
+          "description": "Vanilla vodka, espresso, Bailey's, Kahlua",
+          "price": "15",
+          "order": 99
+        },
+        {
+          "type": "item",
+          "name": "Cosmopolitan",
+          "description": "Vodka, Cointreau, cranberry juice, lime juice",
+          "price": "15"
+        },
+        {
+          "type": "item",
+          "name": "Manhattan",
+          "description": "Rye, sweet vermouth, Ango bitters",
+          "price": "15"
+        },
+        {
+          "type": "item",
+          "name": "Amaretto Sour",
+          "description": "Amaretto, lemon juice, simple syrup",
+          "price": "12"
+        },
+        {
+          "type": "item",
+          "name": "Old Fashioned",
+          "description": "Bourbon, simple syrup, Ango bitters, orange bitters",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Italian Margarita",
+          "description": "Tequila, Amaretto, orange juice, lime juice",
+          "price": "14"
+        },
+        {
+          "type": "item",
+          "name": "Moscow Mule",
+          "description": "Vodka, ginger beer",
+          "price": "12"
+        },
+        {
+          "type": "item",
+          "name": "Vesper",
+          "description": "Gin, vodka, Lillet",
+          "price": "15"
+        },
+        {
+          "type": "item",
+          "name": "Peach Bellini",
+          "description": "Prosecco, peach puree",
+          "price": "12"
+        },
+        {
+          "type": "item",
+          "name": "Red Sangria",
+          "description": "Red wine, fruit, citrus",
+          "price": "15"
+        }
+      ]
+    },
+    {
+      "id": "digestivos",
+      "title": "Digestivos",
+      "order": 12,
+      "entries": [
+        {
+          "type": "item",
+          "name": "Jägermeister",
+          "price": "8"
+        },
+        {
+          "type": "item",
+          "name": "Amaro",
+          "price": "8"
+        },
+        {
+          "type": "item",
+          "name": "Limoncello",
+          "price": "6"
+        },
+        {
+          "type": "item",
+          "name": "Amaretto",
+          "price": "8"
+        },
+        {
+          "type": "item",
+          "name": "Grappa - Scaramellini",
+          "price": "12"
+        },
+        {
+          "type": "item",
+          "name": "Espresso",
+          "price": "3"
+        }
+      ]
+    },
+    {
+      "id": "beverages",
+      "title": "Beverages",
+      "order": 13,
+      "entries": [
+        {
+          "type": "group",
+          "label": "Soft Drinks & Teas",
+          "price": "3.50",
+          "items": [
+            {
+              "name": "Pepsi"
+            },
+            {
+              "name": "Pepsi Zero"
+            },
+            {
+              "name": "Mountain Dew"
+            },
+            {
+              "name": "Starry"
+            },
+            {
+              "name": "Dr Pepper"
+            },
+            {
+              "name": "Mug Root Beer"
+            },
+            {
+              "name": "Pink Lemonade"
+            },
+            {
+              "name": "Unsweetened Tea"
+            },
+            {
+              "name": "Sweetened Tea"
+            },
+            {
+              "name": "Raspberry Sweet Tea"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "order": 4,
+          "name": "Fresh Brewed Coffee",
+          "price": "3"
+        },
+        {
+          "type": "item",
+          "name": "San Pellegrino (sparkling water)",
+          "price": "5"
+        },
+        {
+          "type": "item",
+          "name": "Acqua Panna (Bottled water)",
+          "price": "4"
+        }
+      ]
+    },
+    {
+      "id": "kids-menu",
+      "title": "Kids Menu",
+      "order": 14,
+      "entries": [
+        {
+          "type": "item",
+          "name": "Pompeii Mac & Cheese",
+          "price": "9"
+        },
+        {
+          "type": "item",
+          "name": "Chicken Tenders & Fries",
+          "price": "9"
+        },
+        {
+          "type": "item",
+          "name": "Hot Dog in a Blanket & Fries",
+          "price": "9"
+        },
+        {
+          "type": "item",
+          "name": "Kids Spaghetti",
+          "description": "Choice of little meatballs, marinara sauce, butter, Alfredo sauce",
+          "price": "9"
+        }
+      ]
+    }
+  ]
+}

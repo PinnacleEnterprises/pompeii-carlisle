@@ -24,7 +24,5 @@ git-token.txt
 *.sln
 *.sw?
 
-# Ignore assets folder contents but keep the folder
-src/assets/*
-!src/assets/.gitkeep
+
 
